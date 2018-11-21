@@ -8,7 +8,7 @@ import UserWithDb from './src/usingDB/controller/Users';
 import Auth from './src/usingDB/middleware/Auth';
 
 dotenv.config();
-const Reflection = process.env.TYPE === 'db' ? ReflectionWithDB : ReflectionWithJsObject;
+const Reflection =  ReflectionWithDB;
 const app = express()
 
 app.use(express.json())
