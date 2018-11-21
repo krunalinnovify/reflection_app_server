@@ -2,7 +2,6 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import 'babel-polyfill';
-import ReflectionWithJsObject from './src/usingJSObject/controllers/Reflection';
 import ReflectionWithDB from './src/usingDB/controller/Reflection';
 import UserWithDb from './src/usingDB/controller/Users';
 import Auth from './src/usingDB/middleware/Auth';
@@ -26,5 +25,5 @@ app.post('/api/v1/users', UserWithDb.create);
 app.post('/api/v1/users/login',UserWithDb.login);
 app.delete('/api/v1/users/me', Auth.verifyToken, UserWithDb.delete);
 
-app.listen(3000)
-console.log('app running on port ', 3000);
+app.listen(7001)
+console.log('app running on port ', 7001);
