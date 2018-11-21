@@ -10,6 +10,7 @@ const Reflection = {
    * @returns {object} reflection object 
    */
   async create(req, res) {
+    console.log("Creating");
     const createQuery = `INSERT INTO
       reflections(id, success, low_point, take_away, owner_id, created_date, modified_date)
       VALUES($1, $2, $3, $4, $5, $6, $7)
